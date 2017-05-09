@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+# we're getting there
 
 
   # get "/" => "controller"
