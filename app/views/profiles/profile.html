@@ -1,3 +1,13 @@
 <div id="app">
-  {{ message }}
+  <div v-for='student in students'>
+    <h1> {{student.first_name}} + {{student.last_name}}</h1>
+    <h2> {{student.email}}</h2>
+    <h3>{{student.phone_number}}</h3>
+  </div>
+  <div v-for='experience in experiences'>
+    <div v-if="experience.student_id === '6'">
+    <h3>{{experience.job_title}}</h3>
+    <h3>{{experience.details}}</h3>  
+    </div>
+  </div>
 </div>
