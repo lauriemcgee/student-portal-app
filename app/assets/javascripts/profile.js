@@ -31,15 +31,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
         {student_id: 6, name: "DnD thing", description: "maybe it'll work", url: "iwishihadone.com", screenshot: ""},
         {student_id: 6, name: "Super top secret api", description: "maybe it'll work", url: "topsecretapi.com", screenshot: ""}
       ],
-      changeFirstName: [],
-      changeLastName: [],
-      changePhone: [],
-      changeBio: [],
-      changeLinkedin: [],
-      changeTwitterHandle: [],
-      changeWebsite: [],
-      changeGithub: [],
-      changePhoto: []
+      changeFirstName: "",
+      changeLastName: "",
+      changePhone: "",
+      changeBio: "",
+      changeLinkedin: "",
+      changeTwitterHandle: "",
+      changeWebsite: "",
+      changeGithub: "",
+      changePhoto: ""
     },
   });
 });
