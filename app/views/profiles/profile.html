@@ -1,6 +1,7 @@
 <div id="app">
   <div v-for='student in students'>
     <h1>{{student.first_name}} {{student.last_name}}</h1>
+    <input type="text" v-model='student.first_name'>
     <h2>{{student.email}}</h2>
     <h3>{{student.phone_number}}</h3>
     <div v-for='experience in experiences'>
