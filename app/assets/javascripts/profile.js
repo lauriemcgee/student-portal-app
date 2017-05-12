@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var app = new Vue({
     el: '#app',
     data: {
-      students: [
-        {first_name: "Laurie", last_name: "McGee", email: "laurie.mcgee@email.com", phone_number: "3019227297", bio: "Hey I'm Laurie", id: 6},
-        {first_name: "Ross", last_name: "Dupaw", email: "ross.dupaw@email.com", phone_number: "3018288282", bio: "Hey I'm Ross", id: 26}
-      ],
+      students: [],
       experiences: [ 
         {student_id: 6, start_date: "April 1, 2016", end_date: "April 2, 2016", job_title: "Market Guru", company_name: "Axa", details: "this is some shit that I did"
         },
@@ -39,7 +36,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       changeTwitterHandle: "",
       changeWebsite: "",
       changeGithub: "",
-      changePhoto: ""
+      changePhoto: "",
+
     },
+    mounted: function() {
+      $.get("https://gentle-ridge-69767.herokuapp.com/api/v1/students", function(responseData) {
+        this.students = responseData;
+        console.log('responseData', responseData);
+      }.bind(this));
+    } 
   });
 });
